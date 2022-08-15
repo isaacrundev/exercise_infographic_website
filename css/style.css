@@ -18,9 +18,14 @@ header {
   padding-top: 30px;
 }
 
+#image0 {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 350px;
+}
+
 .topic img {
-  width: 350px;
-  margin: 30px;
+  width: 100%;
 }
 
 .how {
@@ -30,7 +35,6 @@ header {
 }
 .step {
   width: 100%;
-  height: 350px;
 }
 
 .text {
@@ -38,10 +42,21 @@ header {
   width: 250px;
 }
 .container {
-  width: 800px;
+  width: 60%;
   height: 100%;
   position: relative;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step:nth-of-type(even) .image {
+  order: 1;
+}
+
+.step:nth-of-type(even) .text {
+  order: 2;
 }
 
 .image {
@@ -55,22 +70,15 @@ h4 {
 img {
   width: 100%;
 }
+
 #step1 {
   background-color: #457b9d;
 }
 
 #text1 {
-  float: left;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #image1 {
-  float: right;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 #step2 {
   background-color: #a8dadc;
@@ -78,17 +86,9 @@ img {
 }
 
 #text2 {
-  float: right;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #image2 {
-  float: left;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 #step3 {
   background-color: #f1faee;
@@ -96,32 +96,62 @@ img {
 }
 
 #text3 {
-  float: left;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #image3 {
-  float: right;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 #step4 {
   background-color: #457b9d;
 }
 
 #text4 {
-  float: right;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #image4 {
-  float: left;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    display: block;
+    width: 100%;
+    padding: 25px;
+  }
+
+  .text {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .image {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+  }
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  #text1 {
+  }
+
+  #image1 {
+  }
+
+  #text2 {
+  }
+
+  #image2 {
+  }
+
+  #text3 {
+  }
+
+  #image3 {
+  }
+
+  #text4 {
+  }
+
+  #image4 {
+  }
 }
